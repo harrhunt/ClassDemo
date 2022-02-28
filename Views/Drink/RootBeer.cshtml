@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "RootBeer";
+    List<string> rootBeerTypes = new List<string>(){"A&W", "Mug", "Barq's", "Old Fashioned"};
+}
+
+<div class="text-center">
+    <h1 class="display-4">RootBeer</h1>
+    <p>RootBeer is cool!</p>
+    <ul>
+        @for (int i = 0; i < rootBeerTypes.Count; i++)
+        {
+            <li class="rootbeers" value="@i">@rootBeerTypes[i]</li>
+        }
+    </ul>
+</div>
