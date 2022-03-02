@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ClassDemo.Models;
 
 namespace ClassDemo.Controllers 
 {
@@ -10,10 +11,11 @@ namespace ClassDemo.Controllers
         }
 
         public IActionResult Details() {
-            ViewBag.Pizza = "Pepperoni";
-            ViewData["IceCream"] = "Chocolate";
-            TempData["Pizza"] = "Meat Lovers";
-            return RedirectToAction("Index");
+            Person p = new Person();
+            p.FirstName = "Hunter";
+            p.LastName = "Harris";
+            p.DateOfBirth = new DateOnly(2000, 3, 9);
+            return View();
         }
     }
 }

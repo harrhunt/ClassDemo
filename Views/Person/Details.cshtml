@@ -1,0 +1,17 @@
+@model ClassDemo.Models.Person;
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+@if (Model.IsManager)
+{
+    <p>I'm a Manager</p>
+}
+
+<p>@Model.FirstName</p>
+<p>@Model.LastName</p>
+<p>@Model.DateOfBirth</p>
+<p>@Model.IsManager</p>
