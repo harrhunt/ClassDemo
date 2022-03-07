@@ -15,3 +15,29 @@
 <p>@Model.LastName</p>
 <p>@Model.DateOfBirth</p>
 <p>@Model.IsManager</p>
+
+@for (int i = 0; i < Model.FirstName.Length; i++)
+{
+    <span>@Model.FirstName[i]</span>
+}
+
+<dl>
+    <dt>
+        @Html.DisplayNameFor(model => Model.ID)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.ID)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => Model.DateOfBirth)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.DateOfBirth)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => Model.IsManager)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.IsManager)
+    </dd>
+</dl>
