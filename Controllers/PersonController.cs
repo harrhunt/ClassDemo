@@ -15,7 +15,8 @@ namespace ClassDemo.Controllers
             p.FirstName = "Hunter";
             p.LastName = "Harris";
             p.DateOfBirth = new DateOnly(2000, 3, 9);
-            return View();
+            p.IsManager = true;
+            return View(p);
         }
     }
 }
