@@ -1,11 +1,15 @@
-@*
-*@
+@model IEnumerable<Person>
 
-<h1>All about the Person</h1>
+@* <h1>All about the Person</h1>
 <h2>Pizza is awesome, especially @ViewBag.Pizza</h2>
 <h2>Ice Cream is awesome, especially @ViewData["IceCream"]</h2>
 <h2>Pizza is awesome, especially @TempData["Pizza"]</h2>
 <p>Get Nukular Kodes</p>
 <ul>
     <li>ADI39-DF8UJ-SI98I</li>
-</ul>
+</ul> *@
+
+@foreach (Person person in Model)
+{
+    <div>@person.FirstName</div>
+}

@@ -5,9 +5,10 @@ namespace ClassDemo.Controllers
 {
     public class PersonController : Controller {
         public IActionResult Index() {
-            ViewBag.Pizza = "Pepperoni";
-            ViewData["IceCream"] = "Chocolate";
-            return View();
+            // ViewBag.Pizza = "Pepperoni";
+            // ViewData["IceCream"] = "Chocolate";
+            DAL d = new DAL();
+            return View(d.GetPeople());
         }
 
         public IActionResult Details() {
